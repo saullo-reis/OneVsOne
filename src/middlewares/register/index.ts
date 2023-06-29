@@ -1,4 +1,5 @@
 import { Request, Response } from "express";
+import {db} from '../../database/db'
 
 interface IRegisterUser{
     username: string,
@@ -6,5 +7,5 @@ interface IRegisterUser{
 }
 
 const register = (req: Request<{}, {}, IRegisterUser>, res: Response) => {
-
+    const {username, password} = req.body
 }
