@@ -4,7 +4,7 @@ export const helloWorld = (req, res) => {
     res.send('Hello World')
 }
 
-export const posts = (req, res) => {
+export const posts = (__, res) => {
     try{
         main.query('SELECT * FROM postagens WHERE id = 1;', function(err, results){
             if(err) throw err
